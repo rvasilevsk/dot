@@ -1,0 +1,44 @@
+if [ -n "$ZSH_VERSION" ]; then
+    export PROMPT='%B%~%b> '
+    export RPROMPT='[%*]'
+
+    # %n  Имя пользователя
+    # %m  Имя компьютера (до первой точки)
+    # %M  Полное имя компьютера
+    # %~  Путь к текущему каталогу относительно домашнего
+    # %d  Полный путь к текущей директории
+    # %T  Время в формате HH:MM
+    # %*  Время в формате HH:MM:SS
+    # %D  Дата в формате YY-MM-DD
+    # %B, %b  Начало и конец выделения жирным
+    # %U, %u  Начало и конец подчеркивания
+
+    alias -s {erl,ml,hs}=vim
+    alias -s avi=mplayer
+
+    git_prompt() {
+      temp=$(git symbolic-ref HEAD 2>/dev/null | cut -d / -f 3)
+      if [ "$temp" != "" ]; then echo "$temp:"; fi
+    }
+    setopt prompt_subst
+    export PROMPT='%B%~%b>$(git_prompt)>'
+
+    # setopt autocd
+
+    setopt extendedglob
+    # ls *.(sh|config)
+    # echo ^*.erl
+    # ls **/src/*.erl
+    # ls **/src/^*.erl
+
+    setopt menucomplete
+    zstyle ':completion:*' menu select=1 _complete _ignored _approximate
+
+    bindkey '^B' push-line-or-edit
+fi
+
+
+if [ -n "$BASH_VERSION" ]; then
+   # Bash
+    true
+fi
