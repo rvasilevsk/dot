@@ -1,7 +1,7 @@
 updateAll() {
     # todo: echo on, if rustup
 
-    sudo echo updateAll, zeal, ytdl, wportable
+    sudo echo updateAll, pycharm, zeal, ytdl, wportable
     echo cabal update
     cabal update
 
