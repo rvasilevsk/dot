@@ -8,3 +8,9 @@ alias peg='echo "pipenv graph"; pipenv graph'
 alias per='echo "pipenv run python"; pipenv run python'
 
 # pipenv install django django-debug-toolbar pillow
+
+# pipenv install ipython ipykernel numpy pandas tabular matplotlib scipy seaborn plotly
+# pipenv shell
+# python -m ipykernel install --user --name pd
+# jupyter notebook
+# menu/kernel/change kernel
