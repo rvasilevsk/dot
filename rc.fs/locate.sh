@@ -13,8 +13,10 @@ _locateFactoryMac() {
 
 _locateFactoryLinux() {
     # echo _locateFactoryLinux
-    alias loc='type loc; locate -i'
+    alias loc='type locate -i; locate -i'
+    alias loci='type locate; locate'
     alias locStat='type locStat; locate -S'
+    # locate -r /testfile$
     alias updb='echo time sudo updatedb; time sudo updatedb'
 }
 

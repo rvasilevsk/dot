@@ -22,7 +22,7 @@ ytdla() {
 ytdlc() {
     echo youtube-dl create fetching title...
     url="$1"
-    title=`tube_list_title_from_url "$url"`
+    title=$(tube_list_title_from_url "$url")
     echo "$url"
     echo "$title"
     mkdir "$title"

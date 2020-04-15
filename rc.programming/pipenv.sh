@@ -10,7 +10,14 @@ alias per='echo "pipenv run python"; pipenv run python'
 # pipenv install django django-debug-toolbar pillow
 
 # pipenv install ipython ipykernel numpy pandas tabular matplotlib scipy seaborn plotly
-# pipenv shell
-# python -m ipykernel install --user --name pd
-# jupyter notebook
-# menu/kernel/change kernel
+
+export PIPENVROOT="$HOME"/Documents/pyproj
+export PIPENVPANDAS="$PIPENVROOT"/pd
+
+pejup() {
+    cd "$PIPENVPANDAS" || exit
+    pipenv shell
+    python -m ipykernel install --user --name pd
+    jupyter notebook
+    echo "menu/kernel/change kernel"
+}

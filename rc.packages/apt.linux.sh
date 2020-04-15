@@ -48,7 +48,7 @@ alias aptcl='echo "apt clean"; apt clean'
 alias aptall='type aptall; apt update; apt upgrade'
 
 aptdep() {
-    local out="~/Pictures/$1-dependencies.png"
+    local out="$HOME/Pictures/$1-dependencies.png"
     apt-rdepends --dotty "$1" | dot -Tpng > "$out"
     echo "$out"
     unset out
