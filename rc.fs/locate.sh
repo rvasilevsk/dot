@@ -2,6 +2,7 @@ _locateFactoryMac() {
     alias updb="sudo /usr/libexec/locate.updatedb"
 
     alias loc='locate -i'
+    alias loci='locate'
     alias locStat='locate -S'
 
     alias mdf='mdfind'
@@ -13,9 +14,9 @@ _locateFactoryMac() {
 
 _locateFactoryLinux() {
     # echo _locateFactoryLinux
-    alias loc='type locate -i; locate -i'
-    alias loci='type locate; locate'
-    alias locStat='type locStat; locate -S'
+    alias loc='locate -i'
+    alias loci='locate'
+    alias locStat='locate -S' # todo
     # locate -r /testfile$
     alias updb='echo time sudo updatedb; time sudo updatedb'
 }
