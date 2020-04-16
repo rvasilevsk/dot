@@ -98,4 +98,3 @@ fi
 rccd() {
     cd "$DOTFILES" || return
 }
-

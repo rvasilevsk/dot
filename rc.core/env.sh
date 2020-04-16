@@ -14,7 +14,7 @@ CONDA_BIN="$HOME/miniconda3/bin"
 MONGO_BIN="$HOME/bin/mongodb-osx-x86_64-4.0.12/bin"
 NODE_BIN="$HOME/bin/node-v12.14.0-linux-x64/bin"
 # $HOME/bin/mongodb
-
+export JAVA_HOME=/usr/lib/jvm/default-java
 export PATH="/usr/local/sbin:$HOME/bin:$HOME/.local/bin:$PATH:$CONDA_BIN:$MONGO_BIN:$CARGO_BIN:$COMPOSER_BIN:$SQLITE_BIN:$GO_BIN:$NODE_BIN"
 export CDPATH=:..:~:/Volumes:~/Documents/:~/Documents/dev/:~/Documents/dev-beh/:~/Dropbox/drop-docs/:
 

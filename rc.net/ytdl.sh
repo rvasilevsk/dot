@@ -20,7 +20,11 @@ ytdla() {
 }
 
 ytdlc() {
-    echo youtube-dl create fetching title...
+    if [ "$#" -ne 1 ]; then
+        >&2 echo "ytdlc(): Illegal number of parameters"
+        return
+    fi
+    echo youtube-dl create: fetching title...
     url="$1"
     title=$(tube_list_title_from_url "$url")
     echo "$url"
@@ -31,7 +35,27 @@ ytdlc() {
     echo "youtube-dl --download-archive=archive.txt" "$url" > $file
 }
 
+ytdl-list() {
+    if [ "$#" -ne 1 ]; then
+        >&2 echo "ytdl-list(): Illegal number of parameters"
+        return
+    fi
+    echo youtube-dl list: fetching title...
+    url="$1"
+    title=$(tube_list_title_from_url "$url")
+    echo "$url"
+    echo "$title"
+    mkdir "$title"
+    file=_ytdl.sh.cmd
+    echo youtube-dl -o "$title"'/%(title)s.%(ext)s' --download-archive="$title"'/archive.txt' "$url"
+    youtube-dl -o "$title"'/%(title)s.%(ext)s' --download-archive="$title"'/archive.txt' "$url"
+}
+
 tube_list_title_from_url() {
+    if [ "$#" -ne 1 ]; then
+        >&2 echo "tube_list_title_from_url(): Illegal number of parameters"
+        return
+    fi
     # ${title//[^A-Za-z0-9._-]/_}
     title=$(title_from_url "$1")
     title="${title/ - YouTube}"
@@ -45,6 +69,10 @@ tube_list_title_from_url() {
 }
 
 title_from_url() {
+    if [ "$#" -ne 1 ]; then
+        >&2 echo "title_from_url(): Illegal number of parameters"
+        return
+    fi
     wget -q -O - "$1" | \
        tr "\n" " " | \
        sed 's|.*<title>\([^<]*\).*</head>.*|\1|;s|^\s*||;s|\s*$||'
