@@ -1,4 +1,6 @@
-alias pes='echo "pipenv shell"; pipenv shell'
+alias pesh='echo "pipenv shell"; pipenv shell'
+alias pesync='echo "pipenv sync"; pipenv sync'
+alias pel='echo "pipenv lock"; pipenv lock'
 alias pei='echo "pipenv install"; pipenv install'
 alias peid='echo "pipenv install --dev"; pipenv install --dev'
 alias peu='echo "pipenv uninstall"; pipenv uninstall'
@@ -13,6 +15,9 @@ alias per='echo "pipenv run python"; pipenv run python'
 
 export PIPENVROOT="$HOME"/Documents/pyproj
 export PIPENVPANDAS="$PIPENVROOT"/pd
+
+alias pecd='cd ~/.local/share/virtualenvs/'
+alias pecd2='cd "$PIPENVROOT"'
 
 pejup() {
     cd "$PIPENVPANDAS" || exit

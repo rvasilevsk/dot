@@ -1,0 +1,1 @@
+alias pdoch='pdoc --html'

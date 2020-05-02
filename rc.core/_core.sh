@@ -44,6 +44,7 @@ beh_show_is_vars() {
 
 #################################################################################
 export DOTFILES="$HOME"/Documents/dot
+export DOTFILESPRIVATE="$HOME"/Documents/dot-private
 export DOTCOMPILER="$DOTFILES"/rc_compiler.py
 export DOTASSEMBLED="$HOME"/assembled.sh
 

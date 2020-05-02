@@ -1,5 +1,6 @@
 alias fdext='echo "fd --extension"; fd --extension'
-alias fdl='echo "fd -L (-L, --follow = symlinks)"; fd -L'
+alias fdl='echo "fd -L (== --follow == symlinks)"; fd -L'
+alias fdh='echo "fd -H (== --hidden)"; fd -H'
 
 # - Find files matching the given pattern in the current directory:
 #   fd {{pattern}}

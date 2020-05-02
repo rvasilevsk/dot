@@ -6,11 +6,11 @@ alias mdbcl='echo "mdbook clean"; mdbook clean'
 alias mdbt='echo "mdbook test"; mdbook test'
 
 mdbh() {
-    echo 'mdbi - mdbook init'
-    echo 'mdbb - mdbook build'
-    echo 'mdbw - mdbook watch'
-    echo 'mdbs - mdbook serve'
+    echo 'mdbi  - mdbook init'
+    echo 'mdbb  - mdbook build'
+    echo 'mdbw  - mdbook watch'
+    echo 'mdbs  - mdbook serve'
     echo 'mdbcl - mdbook clean'
-    echo 'mdbt - mdbook test'
+    echo 'mdbt  - mdbook test'
     echo 'default addr: 127.0.0.1:3000'
 }
