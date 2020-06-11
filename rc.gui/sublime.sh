@@ -1,14 +1,14 @@
 _sublFactoryMac() {
-	alias subl='open -a "Sublime Text"'
-	alias st='subl'
-	alias stt='st .'
-	alias st.='st .'
+    alias subl='open -a "Sublime Text"'
+    alias st='subl'
+    alias stt='st .'
+    alias st.='st .'
 }
 
 _sublFactoryLinux() {
-	alias st='subl'
-	alias stt='st .'
-	alias st.='st .'
+    alias st='subl'
+    alias stt='st .'
+    alias st.='st .'
 }
 
 case "$(uname -s)" in

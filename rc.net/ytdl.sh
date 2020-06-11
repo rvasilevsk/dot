@@ -1,6 +1,6 @@
-alias ytdl='echo "youtube-dl"; youtube-dl'
-alias ytdls='echo "youtube-dl --write-auto-sub"; youtube-dl --write-auto-sub'
-alias ytdlformats='echo "use youtube-dl -f <n> <url>"; youtube-dl -F'
+alias ytdl='echo "youtube-dl"; df -kh .; youtube-dl'
+alias ytdls='echo "youtube-dl --write-auto-sub"; df -kh .; youtube-dl --write-auto-sub'
+alias ytdlformats='echo "use youtube-dl -f <n> <url>"; df -kh .; youtube-dl -F'
 
 # youtube-dl --write-auto-sub --skip-download --sub-lang=ru https://www.youtube.com/watch\?v\=CevxZvSJLk8
 # for i in *.ass ; do ffmpeg -i "$i" "$i.srt" ; done
