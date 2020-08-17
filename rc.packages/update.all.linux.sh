@@ -1,7 +1,7 @@
 updateAll() {
     # todo: echo on, if rustup
 
-    sudo echo updateAll, pycharm, zeal, ytdl, wportable
+    sudo echo updateAll, carbinall, pycharm, zeal, ytdl, wportable
     echo cabal update
     cabal update
 
@@ -15,6 +15,9 @@ updateAll() {
     apt update
     apt autoremove
     apt upgrade
+
+    carbinall
+    cargo cache -a
 
     echo sudo updatedb
     sudo updatedb
