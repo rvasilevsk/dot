@@ -10,6 +10,9 @@ _clipFactoryLinux() {
     alias ctcs='xclip -selection clipboard' # copy to system wide clipboard (register +)
     alias ctv='xclip -o' # output copied content (paste)
     alias ctvs='xclip -o -selection clipboard' # paste from system wide clipboard (equivalent to `v -selection clipboard`)
+
+    alias ccpng='xclip -selection clipboard -t image/png -i'
+    alias ccpngp='xclip -selection clipboard -t image/png -o >'
 }
 
 case "$(uname -s)" in
@@ -22,3 +25,12 @@ esac
 
 unset -f _clipFactoryMac
 unset -f _clipFactoryLinux
+
+alias cc='/home/beh/Documents/syncthing/0-beh-lora-android-d-versioning/dotfiles-windows/cmd_py/cc.py'
+alias ccd='/home/beh/Documents/syncthing/0-beh-lora-android-d-versioning/dotfiles-windows/cmd_py/ccd.py'
+ccwd() {
+    D=$(pwd)
+    cc "${D}"
+}
+# paste
+alias ccp='/home/beh/Documents/syncthing/0-beh-lora-android-d-versioning/dotfiles-windows/cmd_py/ccp.py'

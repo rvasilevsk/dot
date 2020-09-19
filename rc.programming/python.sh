@@ -133,6 +133,18 @@ alias periodic="python2 -c 'import periodic; periodic.interactive_shell()'"
 # alias xxxIntegrate="mdlt integrate"
 
 ## pip3 ###############################################################################################################
+
+
+pipupgrade() {
+    echo 'python3 -m pip install --upgrade pip'
+    python3 -m pip install --upgrade pip
+}
+
+piprrr() {
+    echo 'pip3 install -r requirements.txt -r requirements_test.txt -r requirements_dev.txt'
+    pip3 install -r requirements.txt -r requirements_test.txt -r requirements_dev.txt
+}
+
 pipi() {
     echo 'pip3 install' "$@"
     pip3 install "$@"

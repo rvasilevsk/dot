@@ -91,9 +91,9 @@ rcf1() {
 }
 
 if [ ${IS_MAC} ]; then
-    rcst() { open -a "Sublime Text" "$DOTFILES"; }
+    rcst() { open -a "Sublime Text" "$DOTFILES" "$DOTFILESPRIVATE"; }
 else
-    rcst() { subl "$DOTFILES"; }
+    rcst() { subl "$DOTFILES" "$DOTFILESPRIVATE"; }
 fi
 
 rccd() {
