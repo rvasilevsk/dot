@@ -16,7 +16,7 @@ updateAll() {
     apt autoremove
     apt upgrade
 
-    carbinall
+    # carbinall
     cargo cache -a
 
     echo sudo updatedb
