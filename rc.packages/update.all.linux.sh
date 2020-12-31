@@ -2,14 +2,14 @@ updateAll() {
     # todo: echo on, if rustup
 
     sudo echo updateAll, carbinall, pycharm, zeal, ytdl, wportable
-    echo cabal update
-    cabal update
+    # echo cabal update
+    # cabal update
 
     echo rustup update
     rustup update
 
-    echo tldr update
-    tldr update
+    echo tldr --update
+    tldr --update
 
     echo apt update / autoremove / upgrade
     apt update
