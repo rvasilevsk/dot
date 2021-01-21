@@ -13,8 +13,9 @@ updateAll() {
 
     echo apt update / autoremove / upgrade
     apt update
-    apt autoremove
-    apt upgrade
+    apt autoremove -y
+    apt upgrade -y
+    apt autoremove -y
 
     # carbinall
     cargo cache -a

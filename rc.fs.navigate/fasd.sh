@@ -6,7 +6,7 @@
 # alias sf='fasd -sif'     # interactive file selection
 # alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 # alias zz='fasd_cd -d -i' # cd with interactive selection
-eval "$(fasd --init auto)"
+#eval "$(fasd --init auto)"
 # echo "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)"
 
-unalias sd  # sd -rust - an intuitive find & replace CLI (sed alternative)
+#unalias sd  # sd -rust - an intuitive find & replace CLI (sed alternative)
