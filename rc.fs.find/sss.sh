@@ -1,1 +1,1 @@
-alias sss='so_stupid_search'
+# alias sss='so_stupid_search'

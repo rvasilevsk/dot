@@ -1,15 +1,15 @@
-alias ~='cd ~'
-alias ..='cd ..'
-alias cd..='cd ..'
-alias .2='cd ../../'
-alias .3='cd ../../../'
-alias .4='cd ../../../../'
-alias .5='cd ../../../../..'
+# alias ~='cd ~'
+# alias ..='cd ..'
+# alias cd..='cd ..'
+# alias .2='cd ../../'
+# alias .3='cd ../../../'
+# alias .4='cd ../../../../'
+# alias .5='cd ../../../../..'
 
-alias ..2='cd ../../'
-alias ..3='cd ../../../'
-alias ..4='cd ../../../../'
-alias ..5='cd ../../../../..'
+# alias ..2='cd ../../'
+# alias ..3='cd ../../../'
+# alias ..4='cd ../../../../'
+# alias ..5='cd ../../../../..'
 
 alias cd1='cd ..'
 alias cd2='cd ../../'
@@ -17,10 +17,17 @@ alias cd3='cd ../../../'
 alias cd4='cd ../../../../'
 alias cd5='cd ../../../../..'
 
-alias ...="cd ../.."
-alias ....="cd ../../.."
+alias cdh='cd ~'
+alias cddw='cd ~/Downloads'
+alias cdd='cd ~/Documents'
+alias cdm='cd ~/Music'
+alias cdv='cd ~/Videos'
+alias cdp='cd ~/Pictures'
 
-alias c-="cd -"
+# alias ...="cd ../.."
+# alias ....="cd ../../.."
+
+# alias c-="cd -"
 alias cd-="cd -"
 
 alias cd.='cd $(readlink -f .)'    # Go to real dir (i.e. if current dir is linked)

@@ -26,11 +26,7 @@ esac
 unset -f _clipFactoryMac
 unset -f _clipFactoryLinux
 
-alias cc='/home/beh/Documents/syncthing/0-beh-lora-android-d-versioning/dotfiles-windows/cmd_py/cc.py'
-alias ccd='/home/beh/Documents/syncthing/0-beh-lora-android-d-versioning/dotfiles-windows/cmd_py/ccd.py'
-ccwd() {
-    D=$(pwd)
-    cc "${D}"
-}
-# paste
-alias ccp='/home/beh/Documents/syncthing/0-beh-lora-android-d-versioning/dotfiles-windows/cmd_py/ccp.py'
+# зависало
+# ccwd() {
+#     xclip -selection clipboard $(pwd)
+# }

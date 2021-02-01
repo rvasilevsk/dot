@@ -32,13 +32,14 @@ _cddd_mac()
     alias cmmm='mmm|pbcopy'
 }
 
-case "$(uname -s)" in
-    Linux*)     _cddd_linux;;
-    Darwin*)    _cddd_mac;;
-    # CYGWIN*)    machine=Cygwin;;
-    # MINGW*)     machine=MinGw;;
-    # *)          machine="UNKNOWN:${unameOut}"
-esac
+# пользую питонячию версию
+# case "$(uname -s)" in
+#     Linux*)     _cddd_linux;;
+#     Darwin*)    _cddd_mac;;
+#     # CYGWIN*)    machine=Cygwin;;
+#     # MINGW*)     machine=MinGw;;
+#     # *)          machine="UNKNOWN:${unameOut}"
+# esac
 
 unset -f _cddd_linux
 unset -f _cddd_mac

@@ -10,3 +10,10 @@ chmx() {
     echo "ls -lh \"$1\""
     ls -lh "$1"
 }
+
+chmX() {
+    echo "chmod -x \"$1\""
+    chmod -x "$1"
+    echo "ls -lh \"$1\""
+    ls -lh "$1"
+}

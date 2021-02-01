@@ -68,40 +68,4 @@ export LC_CTYPE=en_US.UTF-8
 export TERM="screen-256color"
 
 #######################################################################################################################
-export EDITOR=vim
-# export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-# export EDITOR='open -a Sublime\ Text'
 export CHEATCOLORS=true
-
-## colors #############################################################################################################
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
-
-#######################################################################################################################
-# export LESS="-isM"
-export LESS="-isRXF"
-# -i or --ignore-case
-# -s or --squeeze-blank-lines
-# -R or --RAW-CONTROL-CHARS
-# -X or --no-init - [beh] don't clear screen
-# -F or --quit-if-one-screen
-
-#######################################################################################################################
-# export MANPAGER="/usr/local/bin/most -s"
-
-#######################################################################################################################
-# export MANPAGER=less
-# export MANPAGER="less -X"; # Don’t clear the screen after quitting a manual page
-
-# export MANPAGER="/bin/sh -c \"unset MANPAGER;col -b -x | \
-#                  view -R \
-#                       -c 'set ft=man nomod nolist' \
-#                       -c 'set nonumber' \
-#                       -c 'map q :q<CR>' \
-#                       -c 'map <SPACE> <C-F>' -c 'map b <C-U>' \
-#                       -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
