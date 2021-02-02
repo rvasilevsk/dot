@@ -6,6 +6,11 @@ alias py2=python2
 alias py3=python3
 # alias mpy=micropython
 
+pipuall() {
+    pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+}
+
+
 ## virtualenv #########################################################################################################
 export BEH_PY_VENVS="$HOME/Documents/pyenvs"
 

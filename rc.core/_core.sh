@@ -40,6 +40,7 @@ beh_show_is_vars() {
     echo IS_CYGWIN: "${IS_CYGWIN}"
     echo IS_MINGW: "${IS_MINGW}"
     echo IS_UNKNOWN: "${IS_UNKNOWN}"
+    # env | grep -i "is_"
 }
 
 #################################################################################

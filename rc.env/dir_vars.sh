@@ -2,6 +2,7 @@ export DIR_DOT="$HOME"/Documents/dot
 export DIR_DOT_PRIVATE="$HOME"/Documents/dot-private
 
 export DIR_VIM="$HOME"/dotfiles_vim
+export DIR_SNIPS="$HOME"/dotfiles_vim/UltiSnips
 export DIR_VIM_TEMP="$HOME"/tmp/vim
 mkdir -p "$DIR_VIM_TEMP"
 
