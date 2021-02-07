@@ -6,18 +6,21 @@
 # export PAGER=bat
 
 ### most ##############################################################################################################
-export PAGER=/usr/bin/most
+# export PAGER=/usr/bin/most
+
+### less ######################################################################
+export PAGER=/usr/bin/less
 
 ### aliases ###########################################################################################################
 # alias less="$PAGER"
 # alias zless="$PAGER"
 
-pager_unalias() {
-    echo unalias less
-    unalias less
-    echo unalias zless
-    unalias zless
-}
+# pager_unalias() {
+#     echo unalias less
+#     unalias less
+#     echo unalias zless
+#     unalias zless
+# }
 
 ## colors #############################################################################################################
 export LESS_TERMCAP_mb=$'\E[01;31m'

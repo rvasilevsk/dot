@@ -23,6 +23,7 @@ alias aptup='echo "apt update"; apt update'
 alias aptd='echo "apt download"; apt download'
 alias aptf='echo "apt download (fetch on mac)"; apt download'
 alias apti='echo "apt install"; apt install'
+alias aptiy='echo "apt install -y"; apt install -y'
 alias aptrm='echo "apt remove"; apt remove'
 
 alias aptls='echo "apt list --installed"; apt list --installed'
