@@ -145,6 +145,11 @@ pipupgrade() {
     python3 -m pip install --upgrade pip
 }
 
+pipr() {
+    echo 'pip3 install -r requirements.txt'
+    pip3 install -r requirements.txt
+}
+
 piprrr() {
     echo 'pip3 install -r requirements.txt -r requirements_test.txt -r requirements_dev.txt'
     pip3 install -r requirements.txt -r requirements_test.txt -r requirements_dev.txt
