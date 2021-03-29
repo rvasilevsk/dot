@@ -7,10 +7,16 @@ alias ytdlformats='echo "use youtube-dl -f <n> <url>"; df -kh .; youtube-dl -F'
 
 ytdlh() {
     echo 'ytdl'
+    echo 'ytdlda --download-archive=archive.txt'
     echo 'ytdls - with auto subtitles'
     echo 'ytdlformats - list formats'
     echo 'ytdla - audio only'
     echo 'ytdlc - create download dir/script'
+}
+
+ytdlda() {
+    echo youtube-dl --download-archive=archive.txt "$1"
+    youtube-dl --download-archive=archive.txt "$1"
 }
 
 ytdla() {
