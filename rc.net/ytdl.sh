@@ -1,6 +1,10 @@
-alias ytdl='echo "youtube-dl"; df -kh .; youtube-dl'
-alias ytdls='echo "youtube-dl --write-auto-sub"; df -kh .; youtube-dl --write-auto-sub'
-alias ytdlformats='echo "use youtube-dl -f <n> <url>"; df -kh .; youtube-dl -F'
+export YTDL=/home/beh/.local/bin/youtube-dl
+
+alias _ytdl=/home/beh/.local/bin/youtube-dl
+
+alias ytdl='echo "youtube-dl"; df -kh .; _ytdl'
+alias ytdls='echo "youtube-dl --write-auto-sub"; df -kh .; _ytdl --write-auto-sub'
+alias ytdlformats='echo "use youtube-dl -f <n> <url>"; df -kh .; _ytdl -F'
 
 # youtube-dl --write-auto-sub --skip-download --sub-lang=ru https://www.youtube.com/watch\?v\=CevxZvSJLk8
 # for i in *.ass ; do ffmpeg -i "$i" "$i.srt" ; done
@@ -16,13 +20,13 @@ ytdlh() {
 
 ytdlda() {
     echo youtube-dl --download-archive=archive.txt "$1"
-    youtube-dl --download-archive=archive.txt "$1"
+    _ytdl --download-archive=archive.txt "$1"
 }
 
 ytdla() {
-    out=$(youtube-dl -F "$1" | grep 'audio only' | fzf | awk '{print $1}')
+    out=$(_ytdl -F "$1" | grep 'audio only' | fzf | awk '{print $1}')
     echo youtube-dl -f "$out" "$1"
-    youtube-dl -f "$out" "$1"
+    _ytdl -f "$out" "$1"
 }
 
 ytdlc() {
@@ -54,7 +58,7 @@ ytdl-list() {
     mkdir "$title"
     file=_ytdl.sh.cmd
     echo youtube-dl -o "$title"'/%(title)s.%(ext)s' --download-archive="$title"'/archive.txt' "$url"
-    youtube-dl -o "$title"'/%(title)s.%(ext)s' --download-archive="$title"'/archive.txt' "$url"
+    _ytdl -o "$title"'/%(title)s.%(ext)s' --download-archive="$title"'/archive.txt' "$url"
 }
 
 tube_list_title_from_url() {
