@@ -90,7 +90,7 @@ function ipy {
 function jup {
     maybe_deactivate
     ipyactivate
-    jupyter notebook
+    LANGUAGE=en_US.UTF-8 jupyter notebook
     deactivate
 }
 
