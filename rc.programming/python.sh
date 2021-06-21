@@ -181,11 +181,6 @@ pipall() {
     pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
 }
 
-pipcache() {
-    echo 'du -sh ~/.cache/pip'
-    du -sh ~/.cache/pip
-}
-
 ## pip2 ###############################################################################################################
 pip2i() {
     echo 'pip2 install' "$@"
