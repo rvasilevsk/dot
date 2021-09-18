@@ -13,11 +13,15 @@ alias cars='cargo search'
 alias cari='cargo install'
 alias carif='cargo install --force'
 alias caril='cargo install --list'
-alias carill='cargo install --list | grep ":"'
+
+carill() {
+    cargo install --list | grep ":" | awk '{print $1}'
+    # cargo install --list | grep ":" | awk '{print $1}' | tr '\n' ' '
+}
 
 carbinall() {
     # cargo install --list | grep ":" | cut -f1
-    NAMES=$(cargo install --list | grep ":" | awk '{print $1}'| tr '\n' ' ')
+    NAMES=$(cargo install --list | grep ":" | awk '{print $1}' | tr '\n' ' ')
     echo cargo install "$NAMES"
     cargo install $NAMES
 }

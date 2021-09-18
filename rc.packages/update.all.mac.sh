@@ -1,4 +1,6 @@
-updateAll() {
+# updateAll
+
+uuu() {
     # set -o xtrace
     echo -- upgrade_oh_my_zsh -----------
     upgrade_oh_my_zsh

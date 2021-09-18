@@ -100,3 +100,17 @@ fi
 rccd() {
     cd "$DOTFILES" || return
 }
+
+
+rcfzfcheck() {
+    #
+    export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'shellcheck --shell=bash --color=always {}'"
+    "$DOTCOMPILER" --mode=ls | fzf
+}
+
+rcfzfcheckdiff() {
+    # --shell=bash
+    export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'shellcheck --shell=bash --format=diff --color=always {}'"
+    "$DOTCOMPILER" --mode=ls | fzf
+}
+

@@ -1,4 +1,6 @@
-updateAll() {
+# updateAll
+
+uuu() {
     # todo: echo on, if rustup
 
     sudo echo updateAll, carbinall, pycharm, zeal, ytdl, wportable
