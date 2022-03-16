@@ -20,6 +20,7 @@ ytdlh() {
 
 ytdlda() {
     echo youtube-dl --download-archive=archive.txt "$1"
+    echo youtube-dl --download-archive=archive.txt "$1" > _ytdl_dowload_arhive.sh.bat
     _ytdl --download-archive=archive.txt "$1"
 }
 
